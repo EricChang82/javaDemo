@@ -13,6 +13,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import cn.java.Util;
+
 /**
  * Project Name:devProject
  * @author changle
@@ -46,8 +48,8 @@ public class postgreJdbcTest {
 //            ps.setInt(2,1);
             ResultSet rSet = ps.executeQuery();
             while(rSet.next()){
-                System.out.println(rSet.getString(1)+" "+rSet.getString(2));
-                System.out.println(rSet.getString(1)+" "+rSet.getInt(2));
+                Util.print(rSet.getString(1)+" "+rSet.getString(2));
+                Util.print(rSet.getString(1)+" "+rSet.getInt(2));
             }
             
             rSet.close();
